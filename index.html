@@ -9,6 +9,74 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <div class="popup-wrapper">
+  <input type="checkbox" id="dismiss-popup" class="popup-toggle">
+  <div class="popup-cartoon-banner">
+    <label for="dismiss-popup" class="popup-close">✖</label>
+    📣 <strong>Note:</strong> For the best experience, please use a desktop or laptop (min resolution: 1200×700). This site is not optimized for mobile or tablet devices.
+  </div>
+</div>
+<style>
+   /* Hide checkbox */
+.popup-toggle {
+  display: none;
+}
+
+/* Default: hide the popup on large compatible screens */
+.popup-cartoon-banner {
+  display: none;
+}
+
+/* Show only on screens smaller than 1200px width or 700px height */
+@media screen and (max-width: 1199px), screen and (max-height: 699px) {
+  .popup-cartoon-banner {
+    display: block;
+    font-family: 'Comic Sans MS', 'Marker Felt', cursive;
+    background: repeating-linear-gradient(45deg, #fce38a, #fce38a 10px, #81c2f3 10px, #81c9f3 20px);
+    color: #000;
+    padding: 15px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    border: 5px double black;
+    box-shadow: 5px 5px 0 #000;
+    font-size: 16px;
+    z-index: 999;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    animation: popIn 1s ease-in-out;
+  }
+
+  .popup-close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #000;
+    font-weight: bold;
+  }
+
+  /* Dismiss the popup if the checkbox is checked */
+  .popup-toggle:checked + .popup-cartoon-banner {
+    display: none;
+  }
+}
+
+/* Cartoon pop-in animation */
+@keyframes popIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+</style>
+
+
     <div class="header">
         <img src="src/mr-bean-wave.gif" alt="Waving Mr. Bean">
         <h1>Welcome to My Cartoon-Themed Website!</h1>
@@ -87,7 +155,7 @@
                         <h2>B.Tech Degree</h2>
                         <h2>Currently Pursuing</h2>
                         <p>Pursuing my Bachelor's in Computer Science, diving deep into programming, databases, and software development.</p>
-                        <h4>CGPA : 9.58</h4>
+                        <h4>CGPA : 9.59</h4>
                     </div>
                 </div>
             </div>
@@ -138,27 +206,91 @@
 
 
         <div class="course-slider">
-            <div class="row">
-                <div class="flip-container"><div class="flipper"><div class="front"><img src="src/operating system.jpg" alt="Course 1" width="200"><h3>Operating Systems</h3></div><div class="back"><p>Learned process scheduling, memory management, and system security.</p></div></div></div>
-                <div class="flip-container"><div class="flipper"><div class="front"><img src="src/dbms.jpg" alt="Course 2" width="200"><h3>Database Management</h3></div><div class="back"><p>Gained expertise in SQL, normalization, and transaction management.</p></div></div></div>
-                <div class="flip-container"><div class="flipper"><div class="front"><img src="src/dccn.jpg" alt="Course 3" width="200"><h3>Computer Networks</h3></div><div class="back"><p>Understood protocols, routing, and network security.</p></div></div></div>
-                <div class="flip-container"><div class="flipper"><div class="front"><img src="src/compiler.jpg" alt="Course 4" width="200"><h3>Compiler Design</h3></div><div class="back"><p>Learned process scheduling, memory management, and system security.</p></div></div></div>
-                <div class="flip-container"><div class="flipper"><div class="front"><img src="src/AI.jpg" alt="Course 5" width="200"><h3>Artificial Intelligence</h3></div><div class="back"><p>Gained expertise in SQL, normalization, and transaction management.</p></div></div></div>
-                <div class="flip-container"><div class="flipper"><div class="front"><img src="src/toc.jpg" alt="Course 6" width="200"><h3>Theory of computation</h3></div><div class="back"><p>Understood protocols, routing, and network security.</p></div></div></div>
-                <div class="flip-container"><div class="flipper"><div class="front"><img src="src/coa.jpg" alt="Course 7" width="200"><h3>Computer organisation & architecture</h3></div><div class="back"><p>Learned process scheduling, memory management, and system security.</p></div></div></div>
-                <div class="flip-container"><div class="flipper"><div class="front"><img src="src/sisc-math.jpg" alt="Course 8" width="200"><h3>Discrete Mathematics</h3></div><div class="back"><p>Gained expertise in SQL, normalization, and transaction management.</p></div></div></div>
-            </div>
-            <div class="row">
-                <div class="flip-container"><div class="flipper"><div class="front"><img src="src/ml.jpg" alt="Course 9" width="200"><h3>Datascience and AI in healthcare</h3></div><div class="back"><p>Mastered linked lists, trees, graphs, and hashing techniques.</p></div></div></div>
-                <div class="flip-container"><div class="flipper"><div class="front"><img src="src/soft computing.jpg" alt="Course 10" width="200"><h3>Principles of Soft computing</h3></div><div class="back"><p>Learned agile methodologies, SDLC models, and software testing.</p></div></div></div>
-                <div class="flip-container"><div class="flipper"><div class="front"><img src="src/algorithmand ds.jpg" alt="Course 11" width="200"><h3>Data Structure & Algorithm</h3></div><div class="back"><p>Studied search algorithms, machine learning basics, and AI applications.</p></div></div></div>
-                <div class="flip-container"><div class="flipper"><div class="front"><img src="src/c++.jpg" alt="Course 12" width="200"><h3>Programming in C++</h3></div><div class="back"><p>Learned process scheduling, memory management, and system security.</p></div></div></div>
-                <div class="flip-container"><div class="flipper"><div class="front"><img src="src/python.jpg" alt="Course 13" width="200"><h3>Python</h3></div><div class="back"><p>Gained expertise in SQL, normalization, and transaction management.</p></div></div></div>
-                <div class="flip-container"><div class="flipper"><div class="front"><img src="src/oop.jpg" alt="Course 14" width="200"><h3>OOP</h3></div><div class="back"><p>Understood protocols, routing, and network security.</p></div></div></div>
-                <div class="flip-container"><div class="flipper"><div class="front"><img src="src/dec.jpg" alt="Course 15" width="200"><h3>Digital electronics</h3></div><div class="back"><p>Learned process scheduling, memory management, and system security.</p></div></div></div>
-                <div class="flip-container"><div class="flipper"><div class="front"><img src="src/sql.jpg" alt="Course 16" width="200"><h3>SQL</h3></div><div class="back"><p>Gained expertise in SQL, normalization, and transaction management.</p></div></div></div>
-            </div>
-        </div>
+    <div class="row">
+        <div class="flip-container"><div class="flipper">
+            <div class="front"><img src="src/operating system.jpg" alt="Course 1" width="200"><h3>Operating Systems</h3></div>
+            <div class="back"><p>Explored process scheduling, memory & file systems, and concurrency handling.</p></div>
+        </div></div>
+
+        <div class="flip-container"><div class="flipper">
+            <div class="front"><img src="src/dbms.jpg" alt="Course 2" width="200"><h3>Database Management</h3></div>
+            <div class="back"><p>Mastered SQL, ER diagrams, normalization, and transaction management with ACID properties.</p></div>
+        </div></div>
+
+        <div class="flip-container"><div class="flipper">
+            <div class="front"><img src="src/dccn.jpg" alt="Course 3" width="200"><h3>Computer Networks</h3></div>
+            <div class="back"><p>Understood OSI & TCP/IP models, routing protocols, and socket programming.</p></div>
+        </div></div>
+
+        <div class="flip-container"><div class="flipper">
+            <div class="front"><img src="src/compiler.jpg" alt="Course 4" width="200"><h3>Compiler Design</h3></div>
+            <div class="back"><p>Learned lexical analysis, syntax parsing, semantic analysis, and code generation phases.</p></div>
+        </div></div>
+
+        <div class="flip-container"><div class="flipper">
+            <div class="front"><img src="src/AI.jpg" alt="Course 5" width="200"><h3>Artificial Intelligence</h3></div>
+            <div class="back"><p>Studied search algorithms, logic-based agents, and intro to ML techniques.</p></div>
+        </div></div>
+
+        <div class="flip-container"><div class="flipper">
+            <div class="front"><img src="src/toc.jpg" alt="Course 6" width="200"><h3>Theory of Computation</h3></div>
+            <div class="back"><p>Understood finite automata, Turing machines, grammars, and computability concepts.</p></div>
+        </div></div>
+
+        <div class="flip-container"><div class="flipper">
+            <div class="front"><img src="src/coa.jpg" alt="Course 7" width="200"><h3>Computer Organisation & Architecture</h3></div>
+            <div class="back"><p>Explored instruction sets, pipelining, memory hierarchy, and ALU design.</p></div>
+        </div></div>
+
+        <div class="flip-container"><div class="flipper">
+            <div class="front"><img src="src/sisc-math.jpg" alt="Course 8" width="200"><h3>Discrete Mathematics</h3></div>
+            <div class="back"><p>Learned logic, set theory, combinatorics, graphs, and Boolean algebra.</p></div>
+        </div></div>
+    </div>
+
+    <div class="row">
+        <div class="flip-container"><div class="flipper">
+            <div class="front"><img src="src/ml.jpg" alt="Course 9" width="200"><h3>Data Science & AI in Healthcare</h3></div>
+            <div class="back"><p>Applied ML models to healthcare data, including classification and image-based diagnostics.</p></div>
+        </div></div>
+
+        <div class="flip-container"><div class="flipper">
+            <div class="front"><img src="src/soft computing.jpg" alt="Course 10" width="200"><h3>Principles of Soft Computing</h3></div>
+            <div class="back"><p>Explored fuzzy logic, genetic algorithms, and neural networks for approximate reasoning.</p></div>
+        </div></div>
+
+        <div class="flip-container"><div class="flipper">
+            <div class="front"><img src="src/algorithmand ds.jpg" alt="Course 11" width="200"><h3>Data Structures & Algorithms</h3></div>
+            <div class="back"><p>Mastered arrays, linked lists, trees, graphs, sorting/searching, and complexity analysis.</p></div>
+        </div></div>
+
+        <div class="flip-container"><div class="flipper">
+            <div class="front"><img src="src/c++.jpg" alt="Course 12" width="200"><h3>Programming in C++</h3></div>
+            <div class="back"><p>Learned object-oriented programming, STL usage, and memory management in C++.</p></div>
+        </div></div>
+
+        <div class="flip-container"><div class="flipper">
+            <div class="front"><img src="src/python.jpg" alt="Course 13" width="200"><h3>Python Programming</h3></div>
+            <div class="back"><p>Practiced scripting, file handling, libraries like NumPy & Pandas, and basic automation.</p></div>
+        </div></div>
+
+        <div class="flip-container"><div class="flipper">
+            <div class="front"><img src="src/oop.jpg" alt="Course 14" width="200"><h3>Object-Oriented Programming</h3></div>
+            <div class="back"><p>Focused on encapsulation, inheritance, polymorphism, and abstraction principles.</p></div>
+        </div></div>
+
+        <div class="flip-container"><div class="flipper">
+            <div class="front"><img src="src/dec.jpg" alt="Course 15" width="200"><h3>Digital Electronics</h3></div>
+            <div class="back"><p>Studied logic gates, flip-flops, counters, multiplexers, and number systems.</p></div>
+        </div></div>
+
+        <div class="flip-container"><div class="flipper">
+            <div class="front"><img src="src/sql.jpg" alt="Course 16" width="200"><h3>SQL</h3></div>
+            <div class="back"><p>Wrote complex queries, used joins, subqueries, indexes, and performed data manipulation.</p></div>
+        </div></div>
+    </div>
+</div>
+
     </section>
     
     <section id="achievements" class="trophy-case">
@@ -183,25 +315,25 @@
         <div class="shelf second-shelf">
             <div class="trophy">
              
-                <h3>Top 10 in 10th Boards</h3>
-                <p>Secured a spot in the top 10 in the 10th board exams, showcasing my strong foundation in mathematics and science.</p>
+                <h3>Top 25 in Unstop Treasurehunt challenge</h3>
+                <p>Secured a spot in the top 25 in the Unstop Treasurehunt challenge, showcasing my strong foundation in logical reasoning and problem-solving.</p>
             </div>
             <div class="trophy">
  
-                <h3>School Topper in 12th</h3>
-                <p>Secured the first position in the 12th board exams, excelling in physics, chemistry, and mathematics.</p>
+                <h3>AIR 9966 in GATE</h3>
+                <p>Secured an All India Rank of 9966 in the GATE examination, demonstrating my proficiency in engineering subjects.</p>
             </div>
             <div class="trophy">
               
-                <h3>Semi National Finalist in Tata Imagination Challenge</h3>
-                <p>Advanced to the semi-finals in the Tata Imagination Challenge, showcasing my innovative thinking and problem-solving skills.</p>
+                <h3>Naukri CodeQuest#20 – Rank 173 / 32,378</h3>
+                <p>Secured Rank 173 out of 32,378 participants in the Naukri CodeQuest#20, demonstrating my coding skills and problem-solving abilities.</p>
             </div>
         </div>
         
     </section>
 
    
-    <section class="skills-section">
+    <section id="skills" class="skills-section">
         <h2 style="text-shadow: 3px 3px 5px rgba(0, 255, 255, 0.7);">My Skills</h2>
     
         <!-- Additional pictures within the skills section -->
@@ -249,7 +381,10 @@
                     <li>C++ / OOP</li>
                     <li>DBMS / SQL</li>
                     <li>Operating Systems</li>
-                    <li>React.js & Frontend</li>
+                    <li>Machine learning</li>
+                    <li>Data Structures & Algorithms</li>
+                    <li>Python</li> 
+                    <li>AI assisted Frontend Web Development</li>
                 </ul>
             </div>
         </div>
@@ -257,65 +392,65 @@
 
    
 
-    <section class="profiles-section">
+    <section id="profiles" class="profiles-section">
         <h2 class="profiles-title">My Profiles</h2>
         <div class="profiles-grid">
             <div class="profile-card">
-                <a href="https://github.com" target="_blank">
+                <a href="https://github.com/sandhya04-coder" target="_blank">
                     <img src="src/github.png" alt="GitHub">
                     GitHub
                 </a>
             </div>
             <div class="profile-card">
-                <a href="https://linkedin.com" target="_blank">
+                <a href="http://www.linkedin.com/in/sandhya-priyadarsini-pattanaik-27207525b" target="_blank">
                     <img src="src/linkedin.png" alt="LinkedIn">
                     LinkedIn
                 </a>
             </div>
             <div class="profile-card">
-                <a href="https://unstop.com" target="_blank">
+                <a href="https://unstop.com/u/sandhpat4996" target="_blank">
                     <img src="src/unstop.png" alt="Unstop">
                     Unstop
                 </a>
             </div>
             <div class="profile-card">
-                <a href="https://www.codingninjas.com" target="_blank">
+                <a href="https://www.naukri.com/code360/profile/948a2101-fb1c-452d-9e57-2dc90c86b14a" target="_blank">
                     <img src="src/codingninja.jpg" alt="Coding Ninjas">
                     Coding Ninjas
                 </a>
             </div>
             <div class="profile-card">
-                <a href="https://www.codingninjas.com" target="_blank">
+                <a href="https://leetcode.com/u/b122099/" target="_blank">
                     <img src="src/leetcode.png" alt="Coding Ninjas">
                     Leetcode
                 </a>
             </div>
             <div class="profile-card">
-                <a href="https://www.codingninjas.com" target="_blank">
+                <a href="https://www.geeksforgeeks.org/user/b1223dbl/" target="_blank">
                     <img src="src/gfg.png" alt="Coding Ninjas">
                     Geeks for Geeks
                 </a>
             </div>
             <div class="profile-card">
-                <a href="https://www.codingninjas.com" target="_blank">
+                <a href="https://learn.microsoft.com/en-us/users/sandhyapriyadarsinipattanaik-3064/" target="_blank">
                     <img src="src/mslearn.jpg" alt="Coding Ninjas">
                     Microsoft Learn
                 </a>
             </div>
             <div class="profile-card">
-                <a href="https://www.codingninjas.com" target="_blank">
+                <a href="https://www.hackerrank.com/profile/b122099" target="_blank">
                     <img src="src/hackerank.jpg" alt="Coding Ninjas">
                     HackerRank
                 </a>
             </div>
             <div class="profile-card">
-                <a href="https://www.codingninjas.com" target="_blank">
+                <a href="https://www.hackerearth.com/@b122099/" target="_blank">
                     <img src="src/hackerarth.png" alt="Coding Ninjas">
                     HackerEarth
                 </a>
             </div>
             <div class="profile-card">
-                <a href="https://www.codingninjas.com" target="_blank">
+                <a href="https://www.kaggle.com/sandhyapattanaik" target="_blank">
                     <img src="src/kaggle.png" alt="Coding Ninjas">
                     Kaggle
                 </a>
@@ -323,88 +458,88 @@
         </div>
     </section>
 
-    <section class="certification">
+    <section id="certifications" class="certification">
         <div class="certification-title">🏆 Certifications 🏆</div>
         <div class="cert-box">
         <img src="src/bean-hobby.jpg" alt="Mr. Bean" class="mr-bean">
         <div class="certification-box"> 
-        <div class="badge"><img src="src/AI.jpg" alt="Badge 1"></div>
-        <div class="badge"><img src="src/compiler.jpg" alt="Badge 2"></div>
-        <div class="badge"><img src="src/algorithmand ds.jpg" alt="Badge 3"></div>
-        <div class="badge"><img src="src/dbms.jpg" alt="Badge 4"></div>
+        <div class="badge"><img src="src/AI.jpg" alt="Badge 1"><a href="https://coursera.org/share/d7b30c4284e9f042dfdca3b458d5d753">Google AI essentials</a></div>
+        <div class="badge"><img src="src/AI.jpg" alt="Badge 2"><a href="https://coursera.org/share/c5415cd673010f2710c6a9b8710e7d28">Google prompting essentials</a></div>
+        <div class="badge"><img src="src/AI.jpg" alt="Badge 3"><a href="https://learn.microsoft.com/api/achievements/share/en-us/Sandhyapriyadarsinipattanaik-3064/KGQ3QXXB?sharingId=6D0889111F54E528">Foundations of Data Science for Machine Learning</a></div>
+        <div class="badge"><img src="src/AI.jpg" alt="Badge 4"><a href="https://learn.microsoft.com/api/achievements/share/en-us/Sandhyapriyadarsinipattanaik-3064/KGQ32LCB?sharingId=6D0889111F54E528">Understand Data Science for Machine Learning</a></div>
     </div>
 </div>
     </section>
-    
-    <section class="projects">
+
+   <section id="projects" class="projects">
     <h1>🚀 My Projects</h1>
     <div class="projects-container">
         <div class="project-panel">
-            <div class="project-title">Project 1</div>
-            <div class="speech-bubble">💡 <strong>Problem:</strong> Issue tackled.</div>
-            <div class="speech-bubble">🛠 <strong>Solution:</strong> Implementation details.</div>
-            <div class="speech-bubble">📜 <strong>Description:</strong> Overview.</div>
-            <div class="speech-bubble">🎯 <strong>Objective:</strong> Purpose.</div>
-            <div class="speech-bubble">🖥 <strong>Skills Used:</strong> Tech stack.</div>
-            <div class="speech-bubble">📚 <strong>What I Learned:</strong> Key takeaways.</div>
-            <div class="speech-bubble">🚀 <strong>Future Improvements:</strong> Enhancements.</div>
+            <div class="project-title">📘 Personalized Study Mode Prediction System</div>
+            <div class="speech-bubble">💡 <strong>Problem:</strong> Students often struggle to find effective study methods.</div>
+            <div class="speech-bubble">🛠 <strong>Solution:</strong> Built a model to predict optimal study modes using behavior and personality data.</div>
+            <div class="speech-bubble">📜 <strong>Description:</strong> Trained three Random Forest classifiers and combined them using majority voting after preprocessing user responses.</div>
+            <div class="speech-bubble">🎯 <strong>Objective:</strong> Help students identify their most effective study strategy.</div>
+            <div class="speech-bubble">🖥 <strong>Skills Used:</strong> Python, Pandas, Scikit-learn, ML preprocessing</div>
+            <div class="speech-bubble">📚 <strong>What I Learned:</strong> Ensemble learning, categorical feature handling, feature alignment.</div>
+            <div class="speech-bubble">🚀 <strong>Future Improvements:</strong> Integrate feedback-based retraining and quiz UI interface.</div>
         </div>
         
         <div class="project-panel">
-            <div class="project-title">Project 2</div>
-            <div class="speech-bubble">💡 <strong>Problem:</strong> Issue tackled.</div>
-            <div class="speech-bubble">🛠 <strong>Solution:</strong> Implementation details.</div>
-            <div class="speech-bubble">📜 <strong>Description:</strong> Overview.</div>
-            <div class="speech-bubble">🎯 <strong>Objective:</strong> Purpose.</div>
-            <div class="speech-bubble">🖥 <strong>Skills Used:</strong> Tech stack.</div>
-            <div class="speech-bubble">📚 <strong>What I Learned:</strong> Key takeaways.</div>
-            <div class="speech-bubble">🚀 <strong>Future Improvements:</strong> Enhancements.</div>
+            <div class="project-title">🎉 Birthday Website for a Long-Distance Friend</div>
+            <div class="speech-bubble">💡 <strong>Problem:</strong> Distance makes birthdays less personal and interactive.</div>
+            <div class="speech-bubble">🛠 <strong>Solution:</strong> Created an interactive, multi-section birthday website with games and animations.</div>
+            <div class="speech-bubble">📜 <strong>Description:</strong> Includes landing animation, memory gallery, personal letter, Ludo spinner, guessing game, and countdown effects.</div>
+            <div class="speech-bubble">🎯 <strong>Objective:</strong> Make birthdays memorable even when miles apart.</div>
+            <div class="speech-bubble">🖥 <strong>Skills Used:</strong> HTML, CSS, JavaScript, Animation</div>
+            <div class="speech-bubble">📚 <strong>What I Learned:</strong> Interactive web design, emotional UI/UX, JavaScript logic handling.</div>
+            <div class="speech-bubble">🚀 <strong>Future Improvements:</strong> Add music, React-based rebuild, and real-time message feature.</div>
         </div>
 
         <div class="project-panel">
-            <div class="project-title">Project 3</div>
-            <div class="speech-bubble">💡 <strong>Problem:</strong> Issue tackled.</div>
-            <div class="speech-bubble">🛠 <strong>Solution:</strong> Implementation details.</div>
-            <div class="speech-bubble">📜 <strong>Description:</strong> Overview.</div>
-            <div class="speech-bubble">🎯 <strong>Objective:</strong> Purpose.</div>
-            <div class="speech-bubble">🖥 <strong>Skills Used:</strong> Tech stack.</div>
-            <div class="speech-bubble">📚 <strong>What I Learned:</strong> Key takeaways.</div>
-            <div class="speech-bubble">🚀 <strong>Future Improvements:</strong> Enhancements.</div>
+            <div class="project-title">🌊 Flood Prediction CLI Tool</div>
+            <div class="speech-bubble">💡 <strong>Problem:</strong> Lack of accessible tools for flood prediction in Kerala.</div>
+            <div class="speech-bubble">🛠 <strong>Solution:</strong> Built a CLI tool using machine learning models trained on rainfall data.</div>
+            <div class="speech-bubble">📜 <strong>Description:</strong> Models (Logistic, RF, KNN) were trained and evaluated using rainfall features; CLI accepts user input for predictions.</div>
+            <div class="speech-bubble">🎯 <strong>Objective:</strong> Empower local users to predict flood risk quickly.</div>
+            <div class="speech-bubble">🖥 <strong>Skills Used:</strong> Python, Scikit-learn, Pandas, Matplotlib</div>
+            <div class="speech-bubble">📚 <strong>What I Learned:</strong> CLI creation, model comparison, visualizing feature correlations.</div>
+            <div class="speech-bubble">🚀 <strong>Future Improvements:</strong> Integrate live weather API and convert to GUI-based desktop app.</div>
         </div>
 
         <div class="project-panel">
-            <div class="project-title">Project 4</div>
-            <div class="speech-bubble">💡 <strong>Problem:</strong> Issue tackled.</div>
-            <div class="speech-bubble">🛠 <strong>Solution:</strong> Implementation details.</div>
-            <div class="speech-bubble">📜 <strong>Description:</strong> Overview.</div>
-            <div class="speech-bubble">🎯 <strong>Objective:</strong> Purpose.</div>
-            <div class="speech-bubble">🖥 <strong>Skills Used:</strong> Tech stack.</div>
-            <div class="speech-bubble">📚 <strong>What I Learned:</strong> Key takeaways.</div>
-            <div class="speech-bubble">🚀 <strong>Future Improvements:</strong> Enhancements.</div>
+            <div class="project-title">🎨 Cartoon-Themed Personal Portfolio</div>
+            <div class="speech-bubble">💡 <strong>Problem:</strong> Conventional portfolios lack creativity and thematic engagement.</div>
+            <div class="speech-bubble">🛠 <strong>Solution:</strong> Built a comic-style portfolio using cartoon elements like Mr. Bean, Horrid Henry, and Tom & Jerry.</div>
+            <div class="speech-bubble">📜 <strong>Description:</strong> Included themed sections (slider, sticky notes, comic bubbles) for academics, projects, and achievements.</div>
+            <div class="speech-bubble">🎯 <strong>Objective:</strong> Showcase my skills in a fun, memorable way.</div>
+            <div class="speech-bubble">🖥 <strong>Skills Used:</strong> HTML, CSS, BEM, Responsive Design</div>
+            <div class="speech-bubble">📚 <strong>What I Learned:</strong> Thematic UI design, BEM methodology, consistent layout styling.</div>
+            <div class="speech-bubble">🚀 <strong>Future Improvements:</strong> Port to React and add animations using Framer Motion or GSAP.</div>
         </div>
 
         <div class="project-panel">
-            <div class="project-title">Project 5</div>
-            <div class="speech-bubble">💡 <strong>Problem:</strong> Issue tackled.</div>
-            <div class="speech-bubble">🛠 <strong>Solution:</strong> Implementation details.</div>
-            <div class="speech-bubble">📜 <strong>Description:</strong> Overview.</div>
-            <div class="speech-bubble">🎯 <strong>Objective:</strong> Purpose.</div>
-            <div class="speech-bubble">🖥 <strong>Skills Used:</strong> Tech stack.</div>
-            <div class="speech-bubble">📚 <strong>What I Learned:</strong> Key takeaways.</div>
-            <div class="speech-bubble">🚀 <strong>Future Improvements:</strong> Enhancements.</div>
+            <div class="project-title">📂 ML Accessibility Tool (Text Parser)</div>
+            <div class="speech-bubble">💡 <strong>Problem:</strong> Long unstructured text files are difficult to extract data from.</div>
+            <div class="speech-bubble">🛠 <strong>Solution:</strong> Developed a Python tool to parse `.txt` files and extract relevant data using rules or ML assistance.</div>
+            <div class="speech-bubble">📜 <strong>Description:</strong> Allows users to upload or paste large text files and get structured insights or summaries.</div>
+            <div class="speech-bubble">🎯 <strong>Objective:</strong> Make textual data analysis easier for non-technical users.</div>
+            <div class="speech-bubble">🖥 <strong>Skills Used:</strong> Python, Regex, File I/O, NLP basics</div>
+            <div class="speech-bubble">📚 <strong>What I Learned:</strong> Text preprocessing, modular design, integrating with external libraries.</div>
+            <div class="speech-bubble">🚀 <strong>Future Improvements:</strong> Add OCR support with Tesseract and build a query-based front-end interface.</div>
         </div>
     </div>
 </section>
+
    
 
-<section class="contact-section">
+<section id="contact" class="contact-section">
     <div class="contact-container">
         <div class="explosion"></div>
         <h1 class="contact-title">💥 Contact Me! 💬</h1>
         <div class="contact-icons">
-            <div class="icon">📧 Email</div>
-            <div class="icon">📞 Phone</div>
-            <div class="icon">🔗 LinkedIn</div>
+            <div class="icon"> <a href="mailto:b122099@iiit-bh.ac.in" target="_blank"> 📧 Email</a></div>
+            <div class="icon"> <a href="http://www.linkedin.com/in/sandhya-priyadarsini-pattanaik-27207525b" target="_blank"> 🔗 LinkedIn</a></div>
         </div>
         <img src="src/Henry-contact.jpg" alt="Smiling Henry" class="henry-img">
     </div>

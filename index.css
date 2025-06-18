@@ -766,10 +766,7 @@ h1, h2 {
         border-radius: 10%;
     }
 
-    .badge img:hover {
-        transform: scale(2);
     
-    }
 
 
 
@@ -973,3 +970,45 @@ h1, h2 {
         box-shadow: 5px 5px 0px black;
 
     }
+
+   .badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+  position: relative;
+}
+
+.badge img {
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Slight zoom on hover for a playful effect */
+.badge:hover img {
+  transform: scale(1.05);
+}
+
+.badge a {
+  display: none;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  background: #ffeb3b;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 0px black;
+}
+
+/* Show text only on image hover */
+.badge:hover a {
+  display: inline-block;
+}
+
+
+/* media queries Responsive Design */
+/* Responsive Media Queries for All Devices */

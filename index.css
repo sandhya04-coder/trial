@@ -569,7 +569,7 @@ h1, h2 {
 
 .skill-images {
      /* Bring images closer to retro windows */
-
+       display:none;
     left: 30px;
     margin-top: 50px;
 }

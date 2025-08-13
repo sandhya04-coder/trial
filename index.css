@@ -555,48 +555,7 @@ h1, h2 {
     border-radius: 5px;
 }
 
-.skill-images,
-.skill-images2 {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column; /* Stack images vertically */
-    gap: 20px;
-    max-height: 300px; /* Limit height to prevent overflow */
-    flex-wrap: wrap;
-}
 
-.skill-images {
-     /* Bring images closer to retro windows */
-
-    left: 30px;
-    margin-top: 50px;
-}
-
-.skill-images2 {
-   right: 30px;
-   margin-top: 50px; /* Bring images closer to retro windows */
-}
-
-.skill-images img,
-.skill-images2 img {
-    width: 150px; /* Slightly smaller for better fit */
-    height: 150px;
-    max-width: 100%; /* Ensure responsiveness */
-    border: 2px solid #00ffcc;
-    box-shadow: 0 0 10px #00ffcc;
-    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-    cursor: pointer;
-    border-radius: 30%;
-    object-fit: cover;
-}
-
-.skill-images img:hover,
-.skill-images2 img:hover {
-    transform: scale(1.2);
-    filter: drop-shadow(0 0 15px #ff00ff);
-}
 
 
 
